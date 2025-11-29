@@ -1,0 +1,380 @@
+.claims-journey-page {
+  padding-bottom: calc(60px + 80px + 20px); /* Bottom nav + claims actions + padding */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.claims-progress {
+  background: var(--ll-card-bg);
+  padding: var(--ll-spacing-lg);
+  border-bottom: 1px solid var(--ll-border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.claims-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: var(--ll-grey-20);
+  border-radius: var(--ll-radius-pill);
+  overflow: hidden;
+  margin-bottom: var(--ll-spacing-lg);
+}
+
+.claims-progress-fill {
+  height: 100%;
+  background: var(--ll-green-accent);
+  transition: width var(--ll-transition-base);
+  border-radius: var(--ll-radius-pill);
+}
+
+.claims-progress-steps {
+  display: flex;
+  gap: var(--ll-spacing-lg);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.claims-progress-steps::-webkit-scrollbar {
+  display: none;
+}
+
+.claims-progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ll-spacing-xs);
+  min-width: 100px;
+  flex-shrink: 0;
+  opacity: 0.4;
+  transition: opacity var(--ll-transition-base);
+}
+
+.claims-progress-step-active {
+  opacity: 1;
+}
+
+.claims-progress-step-current {
+  opacity: 1;
+}
+
+.claims-progress-step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--ll-grey-20);
+  color: var(--ll-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--ll-font-size-sm);
+  font-weight: var(--ll-font-weight-semibold);
+  transition: all var(--ll-transition-base);
+}
+
+.claims-progress-step-active .claims-progress-step-number {
+  background: var(--ll-button);
+  color: var(--ll-text-on-dark);
+}
+
+.claims-progress-step-label {
+  font-size: var(--ll-font-size-xs);
+  color: var(--ll-text-secondary);
+  text-align: center;
+  line-height: var(--ll-line-height-tight);
+}
+
+.claims-progress-step-active .claims-progress-step-label {
+  color: var(--ll-text-main);
+  font-weight: var(--ll-font-weight-medium);
+}
+
+.claims-content {
+  flex: 1;
+  padding: var(--ll-spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-lg);
+}
+
+.claims-step-title {
+  font-size: var(--ll-font-size-xl);
+  font-weight: var(--ll-font-weight-semibold);
+  color: var(--ll-text-main);
+  margin: 0;
+}
+
+.claims-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-lg);
+}
+
+.claims-step-intro {
+  font-size: var(--ll-font-size-base);
+  color: var(--ll-text-secondary);
+  line-height: var(--ll-line-height-relaxed);
+  margin: 0;
+}
+
+.claims-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-sm);
+}
+
+.claims-option {
+  display: flex;
+  align-items: center;
+  gap: var(--ll-spacing-md);
+  padding: var(--ll-spacing-md);
+  background: var(--ll-card-bg);
+  border: 2px solid var(--ll-border-subtle);
+  border-radius: var(--ll-radius-md);
+  font-size: var(--ll-font-size-base);
+  color: var(--ll-text-main);
+  text-align: left;
+  transition: all var(--ll-transition-base);
+  min-height: 56px;
+  cursor: pointer;
+}
+
+.claims-option:focus {
+  border-color: var(--ll-green-accent);
+  background: var(--ll-green-light);
+}
+
+.claims-option-selected {
+  border-color: var(--ll-green-accent);
+  background: var(--ll-green-light);
+}
+
+.claims-option:active {
+  background: var(--ll-press-bg);
+  border-color: var(--ll-press-bg);
+  color: var(--ll-press-text);
+}
+
+.claims-option-icon {
+  font-size: var(--ll-font-size-xl);
+  flex-shrink: 0;
+}
+
+.claims-option-label {
+  flex: 1;
+  font-weight: var(--ll-font-weight-medium);
+}
+
+.claims-option svg {
+  color: #000000;
+  flex-shrink: 0;
+}
+
+.claims-option:active svg {
+  color: #000000;
+}
+
+.claims-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-sm);
+}
+
+.claims-label {
+  font-size: var(--ll-font-size-sm);
+  font-weight: var(--ll-font-weight-semibold);
+  color: var(--ll-text-main);
+}
+
+.claims-input,
+.claims-textarea {
+  width: 100%;
+  padding: var(--ll-spacing-md);
+  border: 2px solid var(--ll-border-subtle);
+  border-radius: var(--ll-radius-md);
+  font-size: var(--ll-font-size-base);
+  font-family: var(--ll-font-family);
+  color: var(--ll-text-main);
+  background: var(--ll-card-bg);
+  transition: all var(--ll-transition-base);
+}
+
+.claims-input:focus,
+.claims-textarea:focus {
+  outline: none;
+  border-color: var(--ll-green-accent);
+  box-shadow: 0 0 0 3px rgba(11, 226, 72, 0.1);
+}
+
+.claims-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.claims-upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ll-spacing-sm);
+  padding: var(--ll-spacing-md);
+  background: var(--ll-grey-20);
+  border: 2px dashed var(--ll-border-subtle);
+  border-radius: var(--ll-radius-md);
+  font-size: var(--ll-font-size-base);
+  color: var(--ll-text-main);
+  transition: all var(--ll-transition-base);
+  min-height: 56px;
+  cursor: pointer;
+}
+
+.claims-upload-button:focus {
+  border-color: var(--ll-green-accent);
+  background: var(--ll-green-light);
+}
+
+.claims-upload-button:active {
+  background: var(--ll-press-bg);
+  border-color: var(--ll-press-bg);
+  color: var(--ll-press-text);
+}
+
+.claims-upload-button-uploaded {
+  border-color: var(--ll-green-accent);
+  background: var(--ll-green-light);
+  color: var(--ll-green-dark);
+}
+
+.claims-review {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-lg);
+  background: var(--ll-grey-20);
+  padding: var(--ll-spacing-lg);
+  border-radius: var(--ll-radius-md);
+}
+
+.claims-review-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-xs);
+  padding-bottom: var(--ll-spacing-md);
+  border-bottom: 1px solid var(--ll-border-subtle);
+}
+
+.claims-review-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.claims-review-title {
+  font-size: var(--ll-font-size-sm);
+  font-weight: var(--ll-font-weight-semibold);
+  color: var(--ll-text-secondary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.claims-review-value {
+  font-size: var(--ll-font-size-base);
+  color: var(--ll-text-main);
+  line-height: var(--ll-line-height-relaxed);
+  margin: 0;
+}
+
+.claims-review-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--ll-spacing-md);
+}
+
+.claims-edit-button {
+  font-size: var(--ll-font-size-sm);
+  color: var(--ll-green-accent);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: var(--ll-spacing-xs) var(--ll-spacing-sm);
+  cursor: pointer;
+  transition: color var(--ll-transition-fast);
+}
+
+.claims-edit-button:focus {
+  color: var(--ll-green-dark);
+}
+
+.claims-edit-button:active {
+  color: var(--ll-press-text);
+}
+
+.claims-actions {
+  display: flex;
+  gap: var(--ll-spacing-md);
+  padding: var(--ll-spacing-lg);
+  background: var(--ll-card-bg);
+  border-top: 1px solid var(--ll-border-subtle);
+  position: fixed;
+  bottom: 60px; /* Above bottom nav */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  z-index: 99;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.claims-button-primary,
+.claims-button-secondary {
+  flex: 1;
+  padding: var(--ll-spacing-md);
+  border-radius: var(--ll-radius-md);
+  font-size: var(--ll-font-size-base);
+  font-weight: var(--ll-font-weight-semibold);
+  transition: all var(--ll-transition-base);
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.claims-button-primary {
+  background: var(--ll-button);
+  color: var(--ll-text-on-dark);
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.claims-button-primary:focus:not(:disabled) {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.claims-button-primary:active:not(:disabled) {
+  background: var(--ll-press-bg);
+  color: var(--ll-press-text);
+}
+
+.claims-button-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.claims-button-secondary {
+  background: transparent;
+  border: 2px solid var(--ll-border-subtle);
+  color: var(--ll-text-main);
+}
+
+.claims-button-secondary:focus {
+  border-color: var(--ll-green-accent);
+  color: var(--ll-green-accent);
+}
+
+.claims-button-secondary:active {
+  background: var(--ll-press-bg);
+  color: var(--ll-press-text);
+  border-color: var(--ll-press-bg);
+}
+

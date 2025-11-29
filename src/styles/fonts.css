@@ -1,0 +1,100 @@
+/* GT Ultra Font Family - Standard Variant */
+/* Using GT Ultra Standard variant for optimal UI readability */
+
+/* Thin (100) */
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Thin-Trial.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Thin-Italic-Trial.woff2') format('woff2');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Light (300) */
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Light-Trial.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Light-Italic-Trial.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Regular (400) */
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Regular-Trial.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Regular-Italic-Trial.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Bold-Trial.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Bold-Italic-Trial.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Black (900) */
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Black-Trial.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Black-Italic-Trial.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Ultra (800) - for extra bold headings */
+@font-face {
+  font-family: 'GT Ultra';
+  src: url('/fonts/GT-Ultra-Standard-Ultra-Trial.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback: Inter as similar geometric sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+

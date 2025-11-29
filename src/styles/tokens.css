@@ -1,0 +1,92 @@
+:root {
+  /* Core Color Palette - ONLY these colors should be used */
+  --ll-button: #000000;
+  --ll-button-outline: #000000;
+  --ll-text-on-dark: #FFFFFF;
+  --ll-text-on-light: #000000;
+  --ll-bg-app: #F1F1F1;
+  --ll-green-accent: #0BE248;
+  --ll-green-light: #C5FFC1;
+  --ll-green-dark: #0F9F6A;
+  --ll-error: #DB0F30;
+  --ll-error-bg: #FFF6F5;
+  --ll-press-bg: #323233;
+  --ll-press-text: #5B5B5C;
+
+  /* Derived Semantic Colors - mapped to core palette */
+  --ll-green: var(--ll-green-accent);
+  --ll-green-soft: var(--ll-green-light);
+  --ll-green-light-bg: var(--ll-green-light);
+
+  /* Status Colors */
+  --ll-success: var(--ll-green-dark);
+  --ll-warning: var(--ll-press-text);
+
+  /* Neutrals - using only allowed colors */
+  --ll-grey-10: #FFFFFF;
+  --ll-grey-20: var(--ll-bg-app);
+  --ll-grey-40: var(--ll-press-text);
+  --ll-grey-60: var(--ll-press-text);
+  --ll-grey-80: var(--ll-press-bg);
+  --ll-black: var(--ll-button);
+
+  /* Semantic Colors */
+  --ll-bg: var(--ll-bg-app);
+  --ll-card-bg: var(--ll-grey-10);
+  --ll-border-subtle: rgba(0, 0, 0, 0.1);
+  --ll-text-main: var(--ll-text-on-light);
+  --ll-text-muted: var(--ll-press-bg);
+  --ll-text-secondary: var(--ll-press-text);
+
+  /* Spacing */
+  --ll-spacing-xs: 4px;
+  --ll-spacing-sm: 8px;
+  --ll-spacing-md: 16px;
+  --ll-spacing-lg: 24px;
+  --ll-spacing-xl: 32px;
+
+  /* Border Radius */
+  --ll-radius-sm: 8px;
+  --ll-radius-md: 12px;
+  --ll-radius-card: 16px;
+  --ll-radius-pill: 999px;
+
+  /* Shadows */
+  --ll-shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --ll-shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --ll-shadow-large: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --ll-shadow-hover: 0 6px 16px rgba(11, 226, 72, 0.15);
+  
+  /* Gradients */
+  --ll-gradient-green: linear-gradient(135deg, var(--ll-green-accent) 0%, var(--ll-green-dark) 100%);
+  --ll-gradient-green-soft: linear-gradient(135deg, var(--ll-green-light) 0%, var(--ll-green-light) 100%);
+
+  /* Typography */
+  --ll-font-family: "GT Ultra", "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --ll-font-size-xs: 12px;
+  --ll-font-size-sm: 14px;
+  --ll-font-size-base: 16px;
+  --ll-font-size-lg: 18px;
+  --ll-font-size-xl: 20px;
+  --ll-font-size-xxl: 24px;
+
+  --ll-line-height-tight: 1.2;
+  --ll-line-height-normal: 1.4;
+  --ll-line-height-relaxed: 1.5;
+
+  --ll-font-weight-regular: 400;
+  --ll-font-weight-medium: 400; /* GT Ultra doesn't have 500, using Regular */
+  --ll-font-weight-semibold: 700; /* GT Ultra doesn't have 600, using Bold */
+  --ll-font-weight-bold: 700;
+
+  /* Transitions */
+  --ll-transition-fast: 150ms ease;
+  --ll-transition-base: 250ms ease;
+  --ll-transition-slow: 350ms ease;
+
+  /* Z-index layers */
+  --ll-z-modal: 1000;
+  --ll-z-toast: 1100;
+  --ll-z-nav: 100;
+}
+

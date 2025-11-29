@@ -1,0 +1,66 @@
+.emergency-strip {
+  display: none; /* Hidden for now */
+  position: fixed;
+  bottom: 60px; /* Height of bottom nav */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 430px;
+  background: var(--ll-card-bg);
+  border-top: 2px solid var(--ll-green-accent);
+  box-shadow: 0 -4px 16px rgba(11, 226, 72, 0.15);
+  z-index: calc(var(--ll-z-nav) - 1);
+  padding: var(--ll-spacing-md);
+  backdrop-filter: blur(10px);
+}
+
+.emergency-strip-content {
+  display: flex;
+  align-items: center;
+  gap: var(--ll-spacing-sm);
+}
+
+.emergency-icon {
+  color: #000000;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.emergency-text {
+  flex: 1;
+  font-size: var(--ll-font-size-sm);
+  color: var(--ll-text-main);
+  font-weight: var(--ll-font-weight-medium);
+}
+
+.emergency-button {
+  background: var(--ll-button);
+  color: var(--ll-text-on-dark);
+  padding: var(--ll-spacing-xs) var(--ll-spacing-md);
+  border-radius: var(--ll-radius-pill);
+  font-size: var(--ll-font-size-sm);
+  font-weight: var(--ll-font-weight-semibold);
+  white-space: nowrap;
+  transition: all var(--ll-transition-base);
+  min-height: 36px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emergency-button:focus {
+  background: var(--ll-button);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.emergency-button:active {
+  background: var(--ll-press-bg);
+  color: var(--ll-press-text);
+}
+

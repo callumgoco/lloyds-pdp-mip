@@ -1,0 +1,113 @@
+.support-strip {
+  padding: var(--ll-spacing-md);
+}
+
+.support-strip-title {
+  font-size: var(--ll-font-size-lg);
+  font-weight: var(--ll-font-weight-semibold);
+  margin: 0 0 var(--ll-spacing-md) 0;
+  color: var(--ll-text-main);
+}
+
+.support-strip-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-sm);
+}
+
+.support-item {
+  background: var(--ll-card-bg);
+  border: 1px solid var(--ll-border-subtle);
+  border-radius: var(--ll-radius-card);
+  padding: var(--ll-spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--ll-spacing-md);
+  text-align: left;
+  transition: all var(--ll-transition-base);
+  box-shadow: var(--ll-shadow-soft);
+  min-height: 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.support-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--ll-green-accent);
+  transform: scaleY(0);
+  transition: transform var(--ll-transition-base);
+}
+
+.support-item:focus::before {
+  transform: scaleY(1);
+}
+
+.support-item:focus {
+  border-color: var(--ll-green-accent);
+  box-shadow: var(--ll-shadow-hover);
+  transform: translateY(-2px);
+  background: var(--ll-green-light);
+}
+
+.support-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000000;
+  background: transparent;
+  border-radius: var(--ll-radius-md);
+  transition: all var(--ll-transition-base);
+}
+
+.support-item:focus .support-icon {
+  background: transparent;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+.support-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: #000000;
+  fill: none;
+  stroke-width: 2;
+}
+
+.support-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ll-spacing-xs);
+  min-width: 0;
+}
+
+.support-label {
+  font-size: var(--ll-font-size-base);
+  font-weight: var(--ll-font-weight-medium);
+  color: var(--ll-text-main);
+}
+
+.support-description {
+  font-size: var(--ll-font-size-sm);
+  color: var(--ll-text-secondary);
+}
+
+.support-arrow {
+  color: var(--ll-text-muted);
+  flex-shrink: 0;
+  transition: all var(--ll-transition-base);
+}
+
+.support-item:focus .support-arrow {
+  color: var(--ll-green-accent);
+  transform: translateX(4px);
+}
+

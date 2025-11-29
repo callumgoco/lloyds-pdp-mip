@@ -1,0 +1,112 @@
+.accordion {
+  background: var(--ll-card-bg);
+  border: 1px solid var(--ll-border-subtle);
+  border-radius: var(--ll-radius-card);
+  margin-bottom: var(--ll-spacing-sm);
+  overflow: hidden;
+  transition: all var(--ll-transition-base);
+  box-shadow: var(--ll-shadow-soft);
+}
+
+
+.accordion-header {
+  width: 100%;
+  padding: var(--ll-spacing-lg);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--ll-spacing-md);
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--ll-transition-fast);
+}
+
+.accordion-header:focus {
+  background-color: var(--ll-green-light);
+}
+
+.accordion-header:active {
+  background-color: var(--ll-press-bg);
+}
+
+.accordion-header-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.accordion-title {
+  font-size: var(--ll-font-size-base);
+  font-weight: var(--ll-font-weight-semibold);
+  margin: 0 0 var(--ll-spacing-xs) 0;
+  color: var(--ll-text-main);
+}
+
+.accordion-summary {
+  font-size: var(--ll-font-size-sm);
+  color: var(--ll-text-secondary);
+  margin: 0;
+  line-height: var(--ll-line-height-relaxed);
+}
+
+.accordion-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--ll-spacing-sm);
+  flex-shrink: 0;
+}
+
+.accordion-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--ll-green-light);
+  color: var(--ll-button);
+  border-radius: var(--ll-radius-pill);
+  font-size: var(--ll-font-size-xs);
+  font-weight: var(--ll-font-weight-semibold);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.accordion-icon {
+  color: #000000;
+  transition: all var(--ll-transition-base);
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.accordion-icon-open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  transition: height var(--ll-transition-base);
+}
+
+.accordion-content-inner {
+  padding: 0 var(--ll-spacing-lg) var(--ll-spacing-lg);
+  opacity: 0;
+  animation: fadeInContent var(--ll-transition-base) forwards;
+}
+
+@keyframes fadeInContent {
+  to {
+    opacity: 1;
+  }
+}
+
+.accordion-content-inner > *:first-child {
+  margin-top: 0;
+}
+
+.accordion-content-inner > *:last-child {
+  margin-bottom: 0;
+}
+
