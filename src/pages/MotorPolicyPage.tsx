@@ -18,7 +18,6 @@ import { ActionGrid, ActionItem } from '../components/ActionGrid';
 import { TabbedContent, Tab } from '../components/TabbedContent';
 import { Accordion } from '../components/Accordion';
 import { SupportStrip, SupportItem } from '../components/SupportStrip';
-import { EmergencyStrip } from '../components/EmergencyStrip';
 import { Modal } from '../components/Modal';
 import { Toast } from '../components/Toast';
 import './MotorPolicyPage.css';
