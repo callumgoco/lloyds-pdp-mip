@@ -39,8 +39,8 @@ export const motorPolicy: MotorPolicy = {
   productName: "Lloyds Bank Car Insurance",
   coverType: "Comprehensive",
   vehicle: {
-    nickname: "Ford Fiesta",
-    registration: "AB12 CDE",
+    nickname: "Toyota Tacoma",
+    registration: "BD5I SMR",
     year: 2019,
   },
   renewalDate: "2026-06-12",
