@@ -296,16 +296,41 @@ export function MotorPolicyPage() {
         onHelp={handleGetHelp}
       />
       <main className="motor-policy-page">
-        <PolicySummaryCard
-          policy={motorPolicy}
-          onCopyPolicyNumber={handleCopyPolicyNumber}
-        />
-        <ActionGrid actions={actionItems} />
-        <TabbedContent tabs={tabs} defaultTabId="cover" />
-        <EmergencyStrip
-          phoneNumber="0800 123 4567"
-          onCall={() => alert('Calling 24/7 claims line…')}
-        />
+        <section className="motor-policy-section" aria-labelledby="motor-policy-summary-heading">
+          <h2 id="motor-policy-summary-heading" className="motor-policy-section-title">
+            Your policy
+          </h2>
+          <PolicySummaryCard
+            policy={motorPolicy}
+            onCopyPolicyNumber={handleCopyPolicyNumber}
+          />
+        </section>
+
+        <section className="motor-policy-section" aria-labelledby="motor-actions-heading">
+          <h2 id="motor-actions-heading" className="motor-policy-section-title">
+            What would you like to do?
+          </h2>
+          <ActionGrid actions={actionItems} />
+        </section>
+
+        <section className="motor-policy-section" aria-labelledby="motor-cover-heading">
+          <h2 id="motor-cover-heading" className="motor-policy-section-title">
+            Your cover &amp; support
+          </h2>
+          <TabbedContent tabs={tabs} defaultTabId="cover" />
+        </section>
+
+        {/*
+        <section className="motor-policy-section" aria-labelledby="motor-emergency-heading">
+          <h2 id="motor-emergency-heading" className="motor-policy-section-title">
+            In an emergency
+          </h2>
+          <EmergencyStrip
+            phoneNumber="0800 123 4567"
+            onCall={() => alert('Calling 24/7 claims line…')}
+          />
+        </section>
+        */}
       </main>
 
       {/* Modals */}

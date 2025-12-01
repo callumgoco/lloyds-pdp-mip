@@ -11,17 +11,17 @@
   justify-content: center;
   z-index: var(--ll-z-modal);
   padding: var(--ll-spacing-md);
-  animation: fadeIn var(--ll-transition-base);
+  /* animation: fadeIn var(--ll-transition-base); */
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-}
+} */
 
 .modal-content {
   background: var(--ll-card-bg);
@@ -33,11 +33,11 @@
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  animation: slideUp var(--ll-transition-base);
+  /* animation: slideUp var(--ll-transition-base); */
   overflow: hidden;
 }
 
-@keyframes slideUp {
+/* @keyframes slideUp {
   from {
     transform: translateY(20px);
     opacity: 0;
@@ -46,7 +46,7 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
+} */
 
 .modal-small {
   max-width: 360px;
@@ -82,7 +82,7 @@
   justify-content: center;
   color: var(--ll-text-muted);
   border-radius: var(--ll-radius-sm);
-  transition: all var(--ll-transition-base);
+  /* transition: all var(--ll-transition-base); */
 }
 
 .modal-close-icon {
@@ -93,13 +93,13 @@
 .modal-close:focus {
   background-color: transparent;
   color: var(--ll-green-accent);
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
 }
 
-.modal-close:active {
+/* .modal-close:active {
   background-color: transparent;
   color: var(--ll-press-text);
-}
+} */
 
 .modal-body {
   padding: var(--ll-spacing-lg);

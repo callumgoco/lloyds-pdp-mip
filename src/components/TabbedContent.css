@@ -1,11 +1,10 @@
 .tabbed-content {
   background: var(--ll-card-bg);
   border-radius: var(--ll-radius-card);
-  margin: var(--ll-spacing-md);
   overflow: hidden;
   box-shadow: var(--ll-shadow-soft);
   border: 1px solid var(--ll-border-subtle);
-  transition: box-shadow var(--ll-transition-base);
+  /* transition: box-shadow var(--ll-transition-base); */
 }
 
 
@@ -25,14 +24,15 @@
 .tab-button {
   flex: 1;
   padding: var(--ll-spacing-md) var(--ll-spacing-lg);
-  font-size: var(--ll-font-size-base);
+  /* Inactive tabs: slightly smaller text */
+  font-size: 0.9rem;
   font-weight: var(--ll-font-weight-medium);
   color: var(--ll-text-main);
   background: none;
   border: none;
   border-bottom: 3px solid transparent;
   cursor: pointer;
-  transition: all var(--ll-transition-base);
+  /* transition: all var(--ll-transition-base); */
   white-space: nowrap;
   min-width: 100px;
   position: relative;
@@ -53,6 +53,8 @@
   border-bottom-color: var(--ll-green-accent);
   background: var(--ll-card-bg);
   font-weight: var(--ll-font-weight-semibold);
+  /* Active tab: bump text size up */
+  font-size: 1rem;
   position: relative;
 }
 
@@ -67,10 +69,10 @@
   border-radius: 3px 3px 0 0;
 }
 
-.tab-button:active {
+/* .tab-button:active {
   background: var(--ll-press-bg);
   color: var(--ll-press-text);
-}
+} */
 
 .tab-panel {
   padding: var(--ll-spacing-lg);

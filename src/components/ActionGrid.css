@@ -1,5 +1,5 @@
 .action-grid {
-  padding: 0 var(--ll-spacing-md) var(--ll-spacing-md);
+  padding: 0 0 var(--ll-spacing-md);
   display: flex;
   flex-direction: column;
   gap: var(--ll-spacing-sm);
@@ -14,32 +14,25 @@
   align-items: center;
   gap: var(--ll-spacing-md);
   text-align: left;
-  transition: all var(--ll-transition-base);
+  /* transition: all var(--ll-transition-base); */
   box-shadow: var(--ll-shadow-soft);
   min-height: 72px;
   position: relative;
   overflow: hidden;
-}
-
-.action-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: left 0.5s;
 }
 
-.action-item:focus::before {
-  left: 100%;
+.action-grid-secondary .action-item {
+  border: 1px solid #636363;
+  height: 50px;
+  min-height: 50px;
+  padding: 0 var(--ll-spacing-md);
 }
 
 .action-item:focus {
   border-color: var(--ll-green-accent);
   box-shadow: var(--ll-shadow-hover);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
   background: var(--ll-green-light);
 }
 
@@ -60,13 +53,13 @@
 
 .action-item-primary:focus .action-icon {
   background: transparent;
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
-.action-item-primary:active {
+/* .action-item-primary:active {
   background: var(--ll-press-bg);
   color: var(--ll-press-text);
-}
+} */
 
 .action-item-primary:active .action-icon {
   color: #ffffff;
@@ -88,12 +81,12 @@
   background: var(--ll-button);
   border-color: var(--ll-button-outline);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 .action-grid-secondary {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: var(--ll-spacing-sm);
 }
 
@@ -107,13 +100,18 @@
   color: #000000;
   background: transparent;
   border-radius: var(--ll-radius-md);
-  transition: all var(--ll-transition-base);
+  /* transition: all var(--ll-transition-base); */
+}
+
+.action-grid-secondary .action-icon {
+  width: 22px;
+  height: 22px;
 }
 
 .action-item:focus .action-icon {
   background: transparent;
   color: #000000;
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 .action-icon svg {
@@ -131,9 +129,10 @@
   flex: 1;
 }
 
-@media (max-width: 360px) {
-  .action-grid-secondary {
-    grid-template-columns: 1fr;
-  }
+.action-grid-secondary .action-label {
+  font-family: var(--ll-font-family);
+  font-size: var(--ll-font-size-base);
+  font-weight: var(--ll-font-weight-semibold);
 }
+
 

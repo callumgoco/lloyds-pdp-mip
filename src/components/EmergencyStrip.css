@@ -48,7 +48,7 @@
   font-size: var(--ll-font-size-sm);
   font-weight: var(--ll-font-weight-semibold);
   white-space: nowrap;
-  transition: all var(--ll-transition-base);
+  /* transition: all var(--ll-transition-base); */
   min-height: 36px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -56,11 +56,11 @@
 .emergency-button:focus {
   background: var(--ll-button);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transform: translateY(-1px);
+  /* transform: translateY(-1px); */
 }
 
-.emergency-button:active {
+/* .emergency-button:active {
   background: var(--ll-press-bg);
   color: var(--ll-press-text);
-}
+} */
 

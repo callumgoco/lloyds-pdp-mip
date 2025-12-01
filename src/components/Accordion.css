@@ -4,7 +4,7 @@
   border-radius: var(--ll-radius-card);
   margin-bottom: var(--ll-spacing-sm);
   overflow: hidden;
-  transition: all var(--ll-transition-base);
+  /* transition: all var(--ll-transition-base); */
   box-shadow: var(--ll-shadow-soft);
 }
 
@@ -20,16 +20,16 @@
   background: none;
   border: none;
   cursor: pointer;
-  transition: background-color var(--ll-transition-fast);
+  /* transition: background-color var(--ll-transition-fast); */
 }
 
 .accordion-header:focus {
   background-color: var(--ll-green-light);
 }
 
-.accordion-header:active {
+/* .accordion-header:active {
   background-color: var(--ll-press-bg);
-}
+} */
 
 .accordion-header-content {
   flex: 1;
@@ -71,7 +71,7 @@
 
 .accordion-icon {
   color: #000000;
-  transition: all var(--ll-transition-base);
+  /* transition: all var(--ll-transition-base); */
   flex-shrink: 0;
   width: 24px;
   height: 24px;
@@ -82,25 +82,25 @@
 }
 
 .accordion-icon-open {
-  transform: rotate(180deg);
+  /* transform: rotate(180deg); */
 }
 
 .accordion-content {
   overflow: hidden;
-  transition: height var(--ll-transition-base);
+  /* transition: height var(--ll-transition-base); */
 }
 
 .accordion-content-inner {
   padding: 0 var(--ll-spacing-lg) var(--ll-spacing-lg);
-  opacity: 0;
-  animation: fadeInContent var(--ll-transition-base) forwards;
+  /* opacity: 0;
+  animation: fadeInContent var(--ll-transition-base) forwards; */
 }
 
-@keyframes fadeInContent {
+/* @keyframes fadeInContent {
   to {
     opacity: 1;
   }
-}
+} */
 
 .accordion-content-inner > *:first-child {
   margin-top: 0;

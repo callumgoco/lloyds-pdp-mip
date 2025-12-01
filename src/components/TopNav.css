@@ -3,13 +3,18 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--ll-spacing-md);
-  background: var(--ll-card-bg);
-  border-bottom: 1px solid var(--ll-border-subtle);
+  /* background: var(--ll-card-bg); */
+  /* border-bottom: 1px solid var(--ll-border-subtle); */
   position: sticky;
   top: 0;
   z-index: var(--ll-z-nav);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  /* backdrop-filter: blur(10px); */
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); */
+}
+
+/* Figma import mode: avoid sticky positioning so header becomes a normal Auto Layout child */
+.figma-import .top-nav {
+  position: static;
 }
 
 .top-nav-button {
@@ -20,22 +25,22 @@
   justify-content: center;
   color: var(--ll-text-main);
   border-radius: var(--ll-radius-sm);
-  transition: background-color var(--ll-transition-fast);
+  /* transition: background-color var(--ll-transition-fast); */
 }
 
 .top-nav-button:focus {
   background-color: var(--ll-green-light);
   color: var(--ll-green-accent);
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
-.top-nav-button:active {
+/* .top-nav-button:active {
   background-color: var(--ll-press-bg);
   color: var(--ll-press-text);
-}
+} */
 
 .top-nav-title {
-  font-size: var(--ll-font-size-lg);
+  font-size: 22px;
   font-weight: var(--ll-font-weight-semibold);
   margin: 0;
   flex: 1;

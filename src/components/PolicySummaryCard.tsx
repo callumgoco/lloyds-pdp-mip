@@ -19,24 +19,26 @@ export function PolicySummaryCard({ policy, onCopyPolicyNumber }: PolicySummaryC
     return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
   };
 
-  const formatPolicyNumber = (id: string) => {
-    if (id.length > 12) {
-      return `${id.slice(0, 8)}...${id.slice(-4)}`;
-    }
-    return id;
-  };
-
   return (
     <section className="policy-summary-card" aria-labelledby="policy-summary-title">
       <div className="policy-summary-header">
-        <div>
-          <h2 id="policy-summary-title" className="policy-vehicle-name">
-            {policy.vehicle.nickname} – {policy.vehicle.registration}
+        <div className="policy-summary-header-main">
+          <h2 id="policy-summary-title" className="sr-only">
+            Policy summary
           </h2>
-          <div className="policy-badges">
-            <span className="policy-badge policy-badge-type">{policy.coverType}</span>
-            <span className="policy-badge policy-badge-status">{policy.status}</span>
+          <div className="policy-vehicle-details" aria-label="Vehicle details">
+            <div className="policy-vehicle-detail">
+              <span className="policy-vehicle-label">Vehicle model</span>
+              <span className="policy-vehicle-value">{policy.vehicle.nickname}</span>
+            </div>
+            <div className="policy-vehicle-detail">
+              <span className="policy-vehicle-label">License plate</span>
+              <span className="policy-vehicle-value">{policy.vehicle.registration}</span>
+            </div>
           </div>
+        </div>
+        <div className="policy-summary-header-status">
+          <span className="policy-badge policy-badge-status">{policy.status}</span>
         </div>
       </div>
 
@@ -61,10 +63,13 @@ export function PolicySummaryCard({ policy, onCopyPolicyNumber }: PolicySummaryC
       </div>
 
       <div className="policy-summary-meta">
+        <div className="policy-meta-cover">
+          <span className="policy-badge policy-badge-type">{policy.coverType}</span>
+        </div>
         <div className="policy-meta-item">
           <span className="policy-meta-label">Policy number</span>
           <div className="policy-meta-value-group">
-            <span className="policy-meta-value">{formatPolicyNumber(policy.id)}</span>
+            <span className="policy-meta-value">{policy.id}</span>
             <button
               onClick={onCopyPolicyNumber}
               className="policy-copy-button"
